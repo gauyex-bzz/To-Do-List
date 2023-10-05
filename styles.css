@@ -1,11 +1,32 @@
 body{
-    background-color: beige;
+    background-color: grey;
     font-family: Calibri;
     font-size: large;
 }
+
+
 
 input{
     background-color: beige;
     width: 10%;
     height: 23px;
+}
+
+.task{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: start;
+    align-items: center;
+    grid-gap: 2rem;
+}
+
+.task button{
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.task input{
+    width: 30px;
+    height: 30px;
 }
