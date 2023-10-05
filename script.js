@@ -1,6 +1,6 @@
 const tasklist = []
 const taskOutput = document.getElementById('taskOutput');
-document.forms.register.addEventListener("submit", function (event){
+document.forms.userinput.addEventListener("submit", function (event){
     event.preventDefault();
 
 
