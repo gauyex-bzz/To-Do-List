@@ -1,0 +1,11 @@
+body{
+    background-color: beige;
+    font-family: Calibri;
+    font-size: large;
+}
+
+input{
+    background-color: beige;
+    width: 10%;
+    height: 23px;
+}

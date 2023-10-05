@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <button>Login</button>
+    <button>Logout</button>
+
+    <h1>Tasks</h1>
+
+    <section>
+        <form id="userinput">
+            <div class="form-group">
+                <label for="task">Title</label> <br>
+                <input type="text" name="task" id="task">
+            </div>
+
+            <p>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </p>
+
+        </form>
+    </section>
+
+    <dl id="output">
+        <dt>Tasks:</dt>
+        <dd id="taskOutput"></dd>
+    </dl>
+
+<script src="script.js"></script>
+
+</body>
+</html>
