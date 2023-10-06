@@ -1,10 +1,8 @@
 body{
-    background-color: grey;
+    background-color: beige;
     font-family: Calibri;
     font-size: large;
 }
-
-
 
 input{
     background-color: beige;
@@ -14,10 +12,10 @@ input{
 
 .task{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: start;
     align-items: center;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
 }
 
 .task button{
@@ -30,3 +28,5 @@ input{
     width: 30px;
     height: 30px;
 }
+
+input

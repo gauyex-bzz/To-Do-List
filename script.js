@@ -8,29 +8,35 @@ document.addEventListener('DOMContentLoaded', function () {
         let newdiv = document.createElement("div")
         let newP = document.createElement("p")
         let newBtn = document.createElement("button")
+        let newEdit = document.createElement('button')
         let newInput = document.createElement("input")
+
         newInput.setAttribute("type","checkbox")
         newInput.setAttribute("name","checkbox")
         newInput.setAttribute("id","checkbox")
         newdiv.classList.add('task')
-        newBtn.setAttribute('disabled', 'true')
+        newEdit.setAttribute("id", "prompt")
 
         newP.innerText = data.get('task')
-        newBtn.innerText = 'Remove Task'
+        newEdit.innerText = 'Edit Task'
+        newBtn.innerText = 'Delete Task'
+
+
+        newEdit.onclick = () =>{
+            newP.innerText = window.prompt("Change")
+        }
 
         newBtn.onclick = () => {
             newdiv.remove()
         }
 
-        newInput.onchange = (event) => {
-            if (event.target.value){
-                newBtn.removeAttribute('disabled')
-                newInput.setAttribute("disabled","")
-            }
-        }
+
+
+
 
         newdiv.appendChild(newP)
         newdiv.appendChild(newInput)
+        newdiv.appendChild(newEdit)
         newdiv.appendChild(newBtn)
         taskOutput.appendChild(newdiv)
     });
