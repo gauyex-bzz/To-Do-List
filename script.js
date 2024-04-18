@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const tasklist = [];
     const taskOutput = document.getElementById('taskOutput');
     document.forms.userinput.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -16,23 +15,20 @@ document.addEventListener('DOMContentLoaded', function () {
         newInput.setAttribute("id","checkbox")
         newdiv.classList.add('task')
         newEdit.setAttribute("id", "prompt")
-
         newP.innerText = data.get('task')
         newEdit.innerText = 'Edit Task'
         newBtn.innerText = 'Delete Task'
 
-
-        newEdit.onclick = () =>{
-            newP.innerText = window.prompt("Change")
+        newEdit.onclick = () => {
+            let newTask = window.prompt("Change");
+            if (newTask !== null) {
+                newP.innerText = newTask;
+            }
         }
 
         newBtn.onclick = () => {
             newdiv.remove()
         }
-
-
-
-
 
         newdiv.appendChild(newP)
         newdiv.appendChild(newInput)
